@@ -14,5 +14,6 @@ jobs:
         uses: dawidd6/action-download-artifact@v2
         with:
           workflow: "Produce Artifact" # Name of the workflow that produced the artifact
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           name: my-markdown-file # Name of the artifact to downloadg
           path: artifacts
