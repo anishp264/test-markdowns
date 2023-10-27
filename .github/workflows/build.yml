@@ -24,5 +24,5 @@ jobs:
       - name: Read and Display File Contents
         run: |
           # Read the contents of the downloaded file (example.md)
-          file_content=$(cat my-markdown-file/output.md)
+          file_content=my-markdown-file/output.md
           echo "File Content: $file_content"
