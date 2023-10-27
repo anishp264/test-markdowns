@@ -1,4 +1,4 @@
-name: Produce Artifact
+name: pullbuild
 on: 
   pull_request
 jobs: 
