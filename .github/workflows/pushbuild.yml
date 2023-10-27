@@ -1,4 +1,4 @@
-name: Consume Artifact
+name: pushbuild
 on:
   push:
     branches:
@@ -13,7 +13,7 @@ jobs:
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
         with:
-          workflow: "Produce Artifact" # Name of the workflow that produced the artifact
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: pullbuild.yml # Name of the workflow that produced the artifact          
           name: my-markdown-file # Name of the artifact to downloadg
           path: artifacts
