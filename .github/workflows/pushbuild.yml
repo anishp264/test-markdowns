@@ -15,5 +15,5 @@ jobs:
         with:
           workflow: "Produce Artifact" # Name of the workflow that produced the artifact
           run_id: ${{ github.event.workflow_run.id }} # ID of the workflow run that produced the artifact
-          name: my-markdown-file # Name of the artifact to download
+          name: my-markdown-file # Name of the artifact to downloadg
           path: artifacts
