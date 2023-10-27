@@ -22,6 +22,8 @@ jobs:
           path: artifacts
       - name: Test Artifact Download
         run: ls -R
+      - name: Raw file read
+        run: echo "$artifacts/output.md"
       - name: Read and Display File Contents
         run: |
           # Read the contents of the downloaded file (example.md)
