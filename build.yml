@@ -1,0 +1,22 @@
+on: [push]
+jobs: 
+  upload-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Markdown File
+        run: echo "Some content here" > output.md
+      - name: Publish Markdown File as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-markdown-file
+          path: output.md
+  download-artifacts:
+    runs-on: ubuntu-latest
+    needs: upload-artifacts
+    steps:
+      - name: Download Markdown File Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: my-markdown-file
+      - name: Test Artifact Download
+        run: ls -R
