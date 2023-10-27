@@ -1,0 +1,14 @@
+name: Produce Artifact
+on: 
+  pull_request
+jobs: 
+  upload-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Markdown File
+        run: echo "Hello World!!! I'm the pull request md" > output.md
+      - name: Publish Markdown File as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-markdown-file
+          path: output.md
