@@ -29,3 +29,8 @@ jobs:
           # Read the contents of the downloaded file (example.md)
           file_content=$(cat artifacts/output.md)
           echo "File Content: $file_content"
+      - name: Upload Artifacts Again
+        uses: actions/upload-artifact@v2
+        with:
+          name: reuploaded-artifact  # Specify the name for the new artifact
+          path: artifacts/output.md
