@@ -21,3 +21,8 @@ jobs:
           name: my-markdown-file
       - name: Test Artifact Download
         run: ls -R
+      - name: Read and Display File Contents
+        run: |
+          # Read the contents of the downloaded file (example.md)
+          file_content=$(cat my-markdown-file/output.md)
+          echo "File Content: $file_content"
