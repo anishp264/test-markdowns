@@ -19,10 +19,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: my-markdown-file
+          path: artifacts
       - name: Test Artifact Download
         run: ls -R
       - name: Read and Display File Contents
         run: |
           # Read the contents of the downloaded file (example.md)
-          file_content=my-markdown-file/output.md
-          echo "$my-markdown-file"
+          file_content=$(cat artifacts/output.md)
+          echo "File Content: $file_content"
