@@ -2,7 +2,7 @@ name: Consume Artifact
 on:
   push:
     branches:
-      - main  
+      - master  
 jobs:
   download-artifact:
     runs-on: ubuntu-latest
